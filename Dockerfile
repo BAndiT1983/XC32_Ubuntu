@@ -1,4 +1,4 @@
-FROM ubuntu:disco
+FROM ubuntu:hirsute
 
 # Activate i386 architecture and update Ubuntu
 RUN dpkg --add-architecture i386 && \
@@ -9,6 +9,6 @@ RUN dpkg --add-architecture i386 && \
 # Download XC32 installer and install
 RUN cd /tmp && \
     wget --content-disposition https://www.microchip.com/mplabxc32linux && \
-    chmod +x xc32-v2.40-full-install-linux-installer.run && \
-    ./xc32-v2.40-full-install-linux-installer.run --mode unattended --netservername localhost && \
-    rm xc32-v2.40-full-install-linux-installer.run
+    chmod +x xc32-v2.50-full-install-linux-installer.run && \
+    ./xc32-v2.50-full-install-linux-installer.run --mode unattended --netservername localhost && \
+    rm xc32-v2.50-full-install-linux-installer.run000
