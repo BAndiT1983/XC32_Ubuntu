@@ -1,4 +1,4 @@
-FROM ubuntu:disco
+FROM ubuntu:groovy
 # Activate i386 architecture and update Ubuntu
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
