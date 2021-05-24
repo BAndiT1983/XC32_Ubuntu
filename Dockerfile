@@ -1,5 +1,4 @@
-FROM ubuntu:hirsute
-
+FROM ubuntu:disco
 # Activate i386 architecture and update Ubuntu
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
