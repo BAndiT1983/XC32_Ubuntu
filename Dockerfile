@@ -9,8 +9,8 @@ RUN dpkg --add-architecture i386 && \
 # Download XC32 installer and install
 RUN cd /tmp && \
     wget --content-disposition https://www.microchip.com/mplabxc32linux && \
-    chmod +x xc32-v2.50-full-install-linux-installer.run && \
-    ./xc32-v2.50-full-install-linux-installer.run --mode unattended --netservername localhost && \
-    rm xc32-v2.50-full-install-linux-installer.run
+    chmod +x xc32-v3.00-full-install-linux-installer.run && \
+    ./xc32-v3.00-full-install-linux-installer.run --mode unattended --netservername localhost && \
+    rm xc32-v3.00-full-install-linux-installer.run
 
 RUN cd /opt && git clone https://github.com/sergev/pic32prog.git && ln -s /opt/pic32prog/linux64/pic32prog /usr/bin
